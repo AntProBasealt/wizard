@@ -6,6 +6,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON) # подключает текущую дире
 
 set(CMAKE_AUTOMOC ON) # добавляет метаобъектный компилятор
 set(CMAKE_AUTOUIC ON) #
+set(CMAKE_AUTORCC ON)
 
 set(SOURCES
     1.cpp
@@ -25,8 +26,14 @@ set(APP_SOURCES
     main.cpp
 )
 
+set(RESOURCES
+    resources.qrc
+)
+
+qt5_add_resources (RCC_SOURCES ${RESOURCES})
+
 set(SOURCES ${APP_SOURCES} ${SOURCES} ${UI_FORMS})
 
-add_executable(app ${SOURCES})
+add_executable(app ${SOURCES} ${RCC_SOURCES})
 
 target_link_libraries(app Qt5::Core Qt5::Widgets)

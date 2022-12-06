@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     wizard.addPage(createTestPage());
     wizard.addPage(createConclusionPage());
 
-    wizard.setWindowTitle("Trivial Wizard");
+    wizard.setWindowTitle("Мастер диагностики");
     wizard.show();
 
     return app.exec();
