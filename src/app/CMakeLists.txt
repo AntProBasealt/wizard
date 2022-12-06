@@ -8,12 +8,17 @@ set(CMAKE_AUTOMOC ON) # добавляет метаобъектный компи
 set(CMAKE_AUTOUIC ON) #
 
 set(SOURCES
+    1.cpp
+    2.cpp
+    3.cpp
+    4.cpp
 )
 
 set(UI_FORMS
     1.ui
     2.ui
     3.ui
+    4.ui
 )
 
 set(APP_SOURCES

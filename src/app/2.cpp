@@ -1,26 +1,9 @@
-#include <QGridLayout>
-#include <QLabel>
-#include <QLineEdit>
-#include <QWizardPage>
+#include "2.h"
+#include "ui_2.h"
 
-QWizardPage *createRegistrationPage()
+SecondWidget::SecondWidget(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::SecondWidget())
 {
-    QWizardPage *page = new QWizardPage;
-    page->setTitle("Registration");
-    page->setSubTitle("Please fill both fields.");
-
-    QLabel *nameLabel = new QLabel("Name:");
-    QLineEdit *nameLineEdit = new QLineEdit;
-
-    QLabel *emailLabel = new QLabel("Email address:");
-    QLineEdit *emailLineEdit = new QLineEdit;
-
-    QGridLayout *layout = new QGridLayout;
-    layout->addWidget(nameLabel, 0, 0);
-    layout->addWidget(nameLineEdit, 0, 1);
-    layout->addWidget(emailLabel, 1, 0);
-    layout->addWidget(emailLineEdit, 1, 1);
-    page->setLayout(layout);
-
-    return page;
+    ui->setupUi(this);
 }

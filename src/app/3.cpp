@@ -1,19 +1,9 @@
-#include <QLabel>
-#include <QVBoxLayout>
-#include <QWizardPage>
+#include "3.h"
+#include "ui_3.h"
 
-QWizardPage *createConclusionPage()
+ThirdWidget::ThirdWidget(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::ThirdWidget())
 {
-    QWizardPage *page = new QWizardPage;
-    page->setTitle("Conclusion");
-
-    QLabel *label = new QLabel("You are now successfully registered. Have a "
-                               "nice day!");
-    label->setWordWrap(true);
-
-    QVBoxLayout *layout = new QVBoxLayout;
-    layout->addWidget(label);
-    page->setLayout(layout);
-
-    return page;
+    ui->setupUi(this);
 }
